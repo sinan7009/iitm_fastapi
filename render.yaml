@@ -1,17 +1,17 @@
 services:
   - type: web
-    name: fastapi-bot
+    name: fastapi-bot                   # Name of your Render service
     runtime: python
-    plan: free # Free tier: 512 MB RAM, spins down after 15 min inactivity
-    rootDir: fast_api # folder containing main.py
+    plan: free                          # Free tier: 512 MB RAM, spins down after 15 min inactivity
+    rootDir: fast_api                    # Folder containing main.py
     buildCommand: "pip install -r ../requirements.txt"
     startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
       - key: EMAIL
-        value: "your_email_here"
+        value: "24f3004305@ds.study.iitm.ac.in"  # Your Gmail ID
       - key: APP_PASSWORD
-        value: "your_app_password_here"
+        value: "sfkh miwi nsjj meny"           # Your Gmail App Password
       - key: SESSION_PATH
-        value: "path_to_session_folder"
+        value: "./session"                     # Path to your WhatsApp session folder (inside fast_api)

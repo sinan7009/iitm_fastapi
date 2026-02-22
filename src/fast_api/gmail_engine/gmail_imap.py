@@ -3,8 +3,10 @@ import email
 from email.utils import parseaddr
 import os
 
-EMAIL = "24f3004305@ds.study.iitm.ac.in"
-APP_PASSWORD = "sfkh miwi nsjj meny"
+import os
+
+EMAIL = os.getenv("EMAIL")
+APP_PASSWORD = os.getenv("APP_PASSWORD")
 
 KEYWORDS = [
     "donot_reply",
