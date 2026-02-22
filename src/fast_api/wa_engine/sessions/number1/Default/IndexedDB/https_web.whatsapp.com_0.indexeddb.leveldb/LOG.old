@@ -1,0 +1,20 @@
+2026/02/22-06:33:42.624 5e78 Reusing MANIFEST D:\django project\IITM_ai\src\fast_api\wa_engine\sessions\number1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/02/22-06:33:42.624 5e78 Recovering log #200
+2026/02/22-06:33:42.657 5e78 Reusing old log D:\django project\IITM_ai\src\fast_api\wa_engine\sessions\number1\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000200.log 
+2026/02/22-06:33:46.993 4cf8 Level-0 table #209: started
+2026/02/22-06:33:47.009 4cf8 Level-0 table #209: 1182059 bytes OK
+2026/02/22-06:33:47.011 4cf8 Delete type=0 #200
+2026/02/22-06:33:47.466 80d8 Compacting 1@1 + 5@2 files
+2026/02/22-06:33:47.505 80d8 Generated table #210@1: 81429 keys, 2230756 bytes
+2026/02/22-06:33:47.530 80d8 Generated table #211@1: 31597 keys, 2267300 bytes
+2026/02/22-06:33:47.550 80d8 Generated table #212@1: 13899 keys, 2173511 bytes
+2026/02/22-06:33:47.581 80d8 Generated table #213@1: 46094 keys, 2210412 bytes
+2026/02/22-06:33:47.622 80d8 Generated table #214@1: 95380 keys, 2112901 bytes
+2026/02/22-06:33:47.622 80d8 Compacted 1@1 + 5@2 files => 10994880 bytes
+2026/02/22-06:33:47.623 80d8 compacted to: files[ 0 0 5 0 0 0 0 ]
+2026/02/22-06:33:47.624 80d8 Delete type=2 #202
+2026/02/22-06:33:47.624 80d8 Delete type=2 #203
+2026/02/22-06:33:47.624 80d8 Delete type=2 #204
+2026/02/22-06:33:47.624 80d8 Delete type=2 #205
+2026/02/22-06:33:47.624 80d8 Delete type=2 #206
+2026/02/22-06:33:47.624 80d8 Delete type=2 #209

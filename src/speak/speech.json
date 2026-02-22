@@ -1,0 +1,53 @@
+{
+
+  "login_request": [
+    "Please enter your email and password to continue.",
+    "I need your email and password to log you in.",
+    "Enter your login credentials, please."
+  ],
+  "login_success": [
+    "Welcome back, Sinan! Please wait, I am gathering all your data.",
+    "Hello Sinan! Logging you in and getting everything ready.",
+    "Welcome back! Let me fetch all your data for you."
+  ],
+  "login_failed": [
+    "Oops! Login failed. Please check your email and password.",
+    "I couldn't log you in, Sinan. Try again carefully.",
+    "Login unsuccessful. Are you sure your credentials are correct?",
+    "Something went wrong while logging in. Please retry.",
+    "Access denied. Double-check your email and password."
+],
+
+  "fetch_complete": [
+  "All systems are done! You are ready to go.",
+  "Fetching complete! Everything is ready now.",
+  "All your data has been loaded successfully. All set, Sinan!",
+  "Dashboard updated! You can now check your courses and assignments.",
+  "Everything is in place. Your dashboard is up to date.",
+  "All data has been gathered. Ready for your commands."
+],
+  "cgpa_announcement": [
+    "Your current CGPA is {cgpa} ",
+    "You have a CGPA of {cgpa}",
+    "Sinan, your CGPA stands at {cgpa} ",
+    "As of now, your CGPA is {cgpa} ",
+    "Currently, your CGPA is {cgpa} "
+],
+  "next_exam": [
+    "your next exam is {exam_name} scheduled on {exam_date}.",
+    "Heads up! You have {exam_name} exam on {exam_date}. Prepare well!",
+    "Don't forget, your {exam_name} exam is on {exam_date}.",
+    "Get ready for {exam_name} happening on {exam_date}!"
+],
+
+  "upcoming_exam_soon": [
+    "Heads up! Your next exam is {exam_name} on {exam_date}, which is just {days_left} days away. Get ready!",
+    "Alert! Only {days_left} days left until your {exam_name} exam on {exam_date}.",
+    "don't forgot your exam, you only have {days_left} your {exam_name} exam on {exam_date}.",
+    "Your exam i getting closer you only have {days_left} your {exam_name} exam on {exam_date} "
+  ]
+}
+
+
+
+

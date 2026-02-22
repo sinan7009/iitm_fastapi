@@ -1,0 +1,23 @@
+{
+    "last_update_date": "2025-12-05",
+    "exam_details": [
+        {
+            "name": "Quiz 1",
+            "date": "26 October 2025",
+            "told": false
+        },
+        {
+            "name": "Quiz 2",
+            "date": "23 November 2025",
+            "told": false
+        },
+        {
+            "name": "End Term Exams",
+            "date": "21 December 2025",
+            "told": false
+        }
+    ],
+    "cgpa": {
+        "cgpa": "6.43"
+    }
+}
