@@ -22,7 +22,7 @@ def get_latest_filtered_mails(limit=20):
     mail.login(EMAIL, APP_PASSWORD)
     mail.select("inbox")
 
-    status, messages = mail.search(None, "UNSEEN")
+    status, messages = mail.search(None, "ALL")
     all_ids = messages[0].split()
 
     mail_ids = all_ids[-limit:][::-1]  # latest first

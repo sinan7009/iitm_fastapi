@@ -35,7 +35,7 @@ def root():
     return {"hello": "world"}
 
 
-@app.post("login")
+@app.post("/login")
 def wa_login():
     response = login()
     return response
