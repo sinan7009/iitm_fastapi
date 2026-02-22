@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fastapi-bot
+    runtime: python
+    plan: free # Free tier: 512 MB RAM, spins down after 15 min inactivity
+    rootDir: fast_api # folder containing main.py
+    buildCommand: "pip install -r ../requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: EMAIL
+        value: "your_email_here"
+      - key: APP_PASSWORD
+        value: "your_app_password_here"
+      - key: SESSION_PATH
+        value: "path_to_session_folder"
