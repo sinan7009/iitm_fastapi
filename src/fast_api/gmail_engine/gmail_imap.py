@@ -6,22 +6,11 @@ from email.utils import parseaddr
 import os
 
 
-from dotenv import load_dotenv
 import os
-
-# Get project root (IITM_ai)
-BASE_DIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../../../")
-)
-
-dotenv_path = os.path.join(BASE_DIR, ".env")
-
-print("Looking for .env at:", dotenv_path)
-
-load_dotenv(dotenv_path)
 
 EMAIL = os.getenv("EMAIL")
 APP_PASSWORD = os.getenv("APP_PASSWORD")
+
 
 
 KEYWORDS = [
