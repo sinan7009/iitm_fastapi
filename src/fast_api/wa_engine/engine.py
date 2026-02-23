@@ -1,29 +1,61 @@
 from seleniumbase import SB
 import os
+from gmail_engine import gmail_imap
+
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 session_path = os.path.join(BASE_DIR, "sessions", "number1")
 
 
+import os
+from datetime import datetime
+
 def login():
-    with SB(browser="chrome", user_data_dir=session_path, headless=False) as sb:
+    with SB(browser="chrome", user_data_dir=session_path, headless=True) as sb:
         sb.open("https://web.whatsapp.com")
 
         try:
-            # If chat grid loads → already logged in
             sb.wait_for_element("div[role='grid']", timeout=20)
             print("✅ Already logged in")
             return "Already logged in"
 
         except Exception:
-            # QR Code page
-            print("❌ Not logged in. Please scan QR code.")
-            sb.wait_for_element("canvas", timeout=120)
-            sb.wait_for_element("div[role='grid']", timeout=120)
+            print("❌ Not logged in. Waiting for QR...")
+
+            sb.wait_for_element("canvas", timeout=60)
+
+            # Create unique filename
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"qr_{timestamp}"
+
+            sb.save_screenshot(name=filename, folder="wa_qr")
+
+            file_path = os.path.join("wa_qr", f"{filename}.png")
+
+            print("📸 QR Screenshot saved:", file_path)
+
+            # 🔥 SEND EMAIL HERE
+            try:
+                # 🔥 SEND EMAIL
+                gmail_imap.send_email_with_attachment(
+                    to_email="muhammedsinankallayi7009@gmail.com",
+                    subject="WhatsApp Login QR",
+                    body="Scan this QR to login to WhatsApp Web.",
+                    attachment_path=file_path
+                )
+                print("📧 Email sent successfully")
+
+            finally:
+                # 🔥 DELETE QR IMAGE
+                if os.path.exists(file_path):
+                    os.remove(file_path)
+                    print("🗑 QR image deleted")
+
+            sb.wait_for_element("div[role='grid']", timeout=300)
+
             print("✅ Login completed")
             return "Login successful"
-
-
 def send_message(to_phone, msgfrom, msgsub, msgcontext):
     with SB(browser="chrome", user_data_dir=session_path, headless=True) as sb:
         phone = to_phone  # with country code
@@ -38,6 +70,9 @@ def send_message(to_phone, msgfrom, msgsub, msgcontext):
 
         print("Message sent!")
         return {"status": "sent", "to": to_phone, "message": msgfrom}
+
+
+
 
 
 # Ensure session folder exists
