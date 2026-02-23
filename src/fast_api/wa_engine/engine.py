@@ -23,7 +23,7 @@ def login():
         except Exception:
             print("❌ Not logged in. Waiting for QR...")
 
-            sb.wait_for_element("canvas", timeout=60)
+            sb.wait_for_element("canvas", timeout=240)
 
             # Create unique filename
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
