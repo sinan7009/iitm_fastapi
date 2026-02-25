@@ -11,7 +11,7 @@ from google.genai import types
 # Gemini API setup
 # -------------------------------
 # Replace with your actual AI Studio API key
-client = genai.Client(api_key="AIzaSyBNKJZYl5ja-ZxJbmaxf5ZedvQzqdkopi4")
+# client = genai.Client(api_key="AIzaSyBNKJZYl5ja-ZxJbmaxf5ZedvQzqdkopi4")
 
 
 def ask_gemini(prompt):
