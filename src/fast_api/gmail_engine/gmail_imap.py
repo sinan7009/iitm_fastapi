@@ -27,7 +27,7 @@ def get_latest_filtered_mails(limit=20):
     mail.login(EMAIL, APP_PASSWORD)
     mail.select("inbox")
 
-    status, messages = mail.search(None, "ALL")
+    status, messages = mail.search(None, "UNSEEN")
     all_ids = messages[0].split()
 
     mail_ids = all_ids[-limit:][::-1]  # latest first
@@ -114,4 +114,6 @@ def send_email_with_attachment(
         smtp.send_message(msg)
 
     print("✅ Email sent successfully!")
+
+get_latest_filtered_mails()
 

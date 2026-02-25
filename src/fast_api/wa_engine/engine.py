@@ -64,7 +64,7 @@ def send_message(to_phone, msgfrom, msgsub, msgcontext):
         sb.open(url)
 
         sb.sleep(5)
-        sb.wait_for_element("span[data-icon='wds-ic-send-filled']", timeout=30)
+        sb.wait_for_element("span[data-icon='wds-ic-send-filled']", timeout=240)
         sb.click("span[data-icon='wds-ic-send-filled']")
         sb.sleep(5)
 
